@@ -1,0 +1,22 @@
+
+<p class="heading " style="color:rgba(60,6,35) ; "><span class="underline ">TOP PHARMACEUTICALS COMPANIES</span></p>
+
+<div class="row " *ngIf="companies.length>0">
+    <div class="column " *ngFor="let company of companies" >
+        <div class="card " >
+            <img [src]="company.image" style="width:150px;height:auto;padding-top:10px ">
+            <h1>{{company.title}}</h1>
+            <div class="border "></div>
+            <p class="title ">{{company.desc}}</p>
+            <p class="content ">{{company.founder}}</p>
+            <p class="content1 "> {{company.revenue}}</p>
+            <div class="hov ">
+                <a [href]="company.link"><mat-icon>link</mat-icon></a>
+                <a [href]="company.twitter "><i class="bi bi-twitter"></i></a>
+                <a [href]="company.map"><mat-icon>place</mat-icon></a>
+                <a [href]="company.phno"><mat-icon>local_phone</mat-icon></a>
+            </div>
+        </div>
+    </div>
+</div>
+

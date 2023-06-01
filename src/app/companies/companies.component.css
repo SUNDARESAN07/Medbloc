@@ -1,0 +1,150 @@
+.heading {
+    
+    font-size: 34px;
+    position: relative;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+}
+.column {
+    width: 20%;
+    align-items: center;
+    float:right;
+    padding: 10px;
+    margin: 10px;
+}
+
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+}
+
+
+
+.underline {
+    text-decoration: underline;
+}
+
+
+
+.border1 {
+    width: 315px;
+    height: 2px;
+    background: blanchedalmond;
+    margin-left: 41rem;
+}
+
+
+
+.page-content {
+    min-height: 100vh;
+    font-size: 40px;
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width:960px) {
+  
+ 
+    .border1 {
+        width: 100px;
+        height: 4px;
+        background: #fc5c65;
+        margin-left: 210px;
+        text-align: center;
+    }
+}
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .heading {
+        font-size: 35px;
+        margin-top: 90px;
+        margin-left: 60px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: bolder;
+    }
+    .border1 {
+        width: 360px;
+        height: 2px;
+        background: black;
+        margin-left: 10rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .heading {
+        font-size: 15px;
+        margin-top: 90px;
+        margin-left: 30px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: bolder;
+    }
+    .border1 {
+        width: 150px;
+        height: 2px;
+        background: black;
+        margin-left: 5rem;
+    }
+}
+
+.card {
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    background-color: white;
+    text-align: center;
+    border-radius: 40px;
+    padding: 5px;
+    padding-bottom: 15px;
+}
+
+.title {
+    color: #353935;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: cursive;
+}
+
+.content {
+    color: #353935;
+    font-size: 14px;
+    font-family: cursive;
+    font-weight: 700;
+}
+
+.content1 {
+    color: #353935;
+    font-size: 14px;
+    font-family: cursive;
+    font-weight: 600;
+}
+
+.hov a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #8ED3F3;
+    transition: 0.2s;
+    border-radius: 70%
+}
+
+.hov a:hover,
+.hov button:hover {
+    background: #2c3e50;
+    color: white;
+}

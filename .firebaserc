@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "medbloc-project2022": {
+      "hosting": {
+        "medbloc-app": [
+          "medbloc-project2022"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "medbloc-project2022"
+  }
+}

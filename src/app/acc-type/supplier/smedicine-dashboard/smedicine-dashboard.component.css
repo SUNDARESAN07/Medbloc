@@ -1,0 +1,123 @@
+.medicinedisplay h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#srchman {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: auto;
+}
+#form h1{
+    text-align: center;
+    color:white; 
+    padding-top: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-style: italic;
+            font-weight: bold;
+}
+#srchman h1 {
+    color: white;
+    padding: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: bold;
+}
+h4{
+    margin-left: 2em;
+    color:white;
+}
+h2{
+    color: white;
+}
+.qrcode{
+    background:transparent;
+     color:white;
+     box-shadow: inset 0 3px 5px rgb(0 0 0 / 13%);
+}
+p {
+    margin-right: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.tabled {
+    border-collapse: collapse;
+    table-layout: fixed;
+    display: inline;
+    justify-content: space-around;
+}
+
+.tabled th,
+td {
+
+    padding: 6pt;
+    border: 3px solid black;
+}
+
+th,
+td {
+    color: white;
+}
+
+.box1 {
+    background-image: url('~src/assets/scan-qr-code.jpg');
+    background-size: cover;
+    height: 980px;
+    padding: top 30px;
+}
+
+.inner-banner-image1 {
+    width: 60%;
+    margin: auto;
+}
+
+.banner-image-content1 {
+    position: relative;
+    padding-bottom: 6%;
+    overflow: hidden;
+    margin: auto;
+    max-width: 660px;
+}
+
+
+.box1 {
+    padding-top: 5rem;
+    text-align: center;
+    padding-bottom: 300px;
+}
+
+#outputbox {
+    float: left;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1;
+    /* Firefox */
+}
+
+.file__upload {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    font-size: 16px;
+    border-radius: 6px;
+    color: black;
+}
+
+.btn {
+    color: white;
+    background-color: #3c0877;
+    border-color: #45097e;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    font-size: 18px;
+    border-radius: 6px;
+    padding: 5px 10px;
+    margin:  7px; ;
+    transition: 0.2s;
+}

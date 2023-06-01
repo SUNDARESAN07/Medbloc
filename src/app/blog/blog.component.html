@@ -1,0 +1,20 @@
+<section class="banner" style="background:linear-gradient(135deg, #f5f7fa 0%, #487ed4 100%); background-size :cover;">
+    <div class="banner-main-content">
+        <h2>NEWS ARTICLES RELATED TO FAKE MEDICINES</h2>
+        <h3>Save yourself from being Counterfieted!</h3>
+        <button>
+            <a href="#">Know More</a>
+        </button>
+    </div>
+    <div class="banner-sub-content" *ngIf="blogs.length>0">
+        <div class="hot-topic" *ngFor="let blog of blogs">
+            <img [src]="blog.image" alt="">
+            <div class="hot-topic-content">
+                <h2>{{blog.title}}</h2>
+                <h3></h3>
+                <p>{{blog.desc}}</p>
+                <a [href]="blog.link" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,38 @@
+
+<p class="heading " style="color:rgba(60,6,35) ; "><span class="underline ">MEDICINE DASHBOARD</span></p>
+<button type="button"  routerLink="../add">ADD Medicine</button>
+<div class="container" id="container">
+    <div id="tabe" *ngIf="medicines.length>0">
+    <table id="tabledm" class="tabled">
+       <thead>
+               <th>S.no</th>
+               <th>Company Name</th>
+               <th>Medicine name</th>
+               <th>Quantity</th>
+               <th>Batch no</th>
+               <th>MFG date</th>
+               <th>EXP date</th>
+               <th>Generate QR</th>              
+       </thead>
+  <tbody id="tbd" >
+        <tr *ngFor="let med of medicines ;let i=index" >
+                <td>{{i+1}}</td>
+                <td>{{med.cname}}</td>
+                <td>{{med.medname}}</td>
+                <td>{{med.quantity}}</td>
+                <td>{{med.batchno}}</td>
+                <td>{{med.mfgdate}}</td>
+                <td>{{med.expdate}}</td>
+                <td>
+                <img [src]="getQRCode(med.batchno)" width="75" height="75" [name]="med.batchno" #img/><br>
+                <button (click)="downloadQR(img)">Download</button>
+                </td>      
+        </tr>
+
+  </tbody>
+    </table>
+    </div>
+</div>
+<div *ngIf="medicines.length==0">
+        <p  class="data">NO MEDICINE FOUND!!!!</p>
+</div>

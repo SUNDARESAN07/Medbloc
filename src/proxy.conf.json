@@ -1,0 +1,29 @@
+[
+    {
+        "context":["/medicine"],
+        "target": "http://localhost:8108",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+     {
+        "context":["/manufacturer"],
+        "target": "http://localhost:8109",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+     {
+        "context":["/supplier"],
+        "target": "http://localhost:8110",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+     {
+        "context":["/consumer"],
+        "target": "http://localhost:8111",
+        "secure": false,
+        "changeOrigin": true
+    }
+]

@@ -1,0 +1,14 @@
+<div class="services-section ">
+    <div class="inner-width ">
+        <h1 class="section-title ">Explore <label>&nbsp;<span>MedBloc</span></label></h1>
+        <div class="border0 "></div>
+        <div class="services-container" *ngIf="abouts.length>0">
+            <div class="service-box" *ngFor="let about of abouts" >
+                <div class="service-icon "><i [class]="about.icon"></i></div>
+                <div class="service-title ">{{about.title}}</div>
+                <div class="border1 "></div>
+                <div class="service-desc "> {{about.desc}}</div>
+            </div>
+        </div>
+    </div>
+</div>

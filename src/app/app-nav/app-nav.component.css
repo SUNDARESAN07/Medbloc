@@ -1,0 +1,23 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+img{
+  margin-right: 10px;
+}
+mat-sidenav-content{
+background-image: linear-gradient(to top, #6fa6e6 0%, #b388e6fa 100%);;
+}

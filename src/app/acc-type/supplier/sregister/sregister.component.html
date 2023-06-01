@@ -1,0 +1,110 @@
+<div class="wrapper">
+    <div class="title">
+        Supplier Registration Form
+    </div>
+    <form #sform="ngForm">
+        <div class="inputs">
+            <div class="inputfield">
+                <label>SID:</label>
+                <input id="sid" type="text" class="input" [value]="supplier.sid" name="sid" disabled>
+            </div>
+            <div class="inputfield">
+                <label>First Name:</label>
+                <input id="fname" type="text" class="input" [(ngModel)]="sname.firstname" name="name1" #name1="ngModel"
+                    required minlength="3">
+            </div>
+            <div *ngIf="name1.errors && (name1.dirty || name1.touched)">
+                <div [hidden]="!name1.errors" class="alert alert-danger form-alert">
+                    Please enter a valid name(min 3 characters).
+                </div>
+            </div>
+            <div class="inputfield">
+                <label>Last Name:</label>
+                <input id="lname" type="text" class="input" [(ngModel)]="sname.lastname" name="name2" #name2="ngModel"
+                    required minlength="3">
+            </div>
+            <div *ngIf="name2.errors && (name2.dirty || cname.touched)">
+                <div [hidden]="!name2.errors" class="alert alert-danger form-alert">
+                    Please enter a valid name(min 3 characters).
+                </div>
+            </div>
+            <div class="inputfield">
+                <label>Email Address:</label>
+                <input id="emailid" type="email" class="input" [(ngModel)]="supplier.email" name="email" #email="ngModel"
+                    required pattern="[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
+            </div>
+            <div *ngIf="email.errors && (email.dirty || email.touched)">
+                <div [hidden]="!email.errors" class="alert alert-danger form-alert">
+                    Please enter a valid email.
+                </div>
+            </div>
+            <div class="inputfield">
+                <label>Company Name:</label>
+                <input id="cname" type="text" class="input" [(ngModel)]="supplier.cname" name="cname" #cname="ngModel"
+                    required minlength="5">
+            </div>
+            <div *ngIf="cname.errors && (cname.dirty || cname.touched)">
+                <div [hidden]="!cname.errors" class="alert alert-danger form-alert">
+                    Please enter a valid name(min 5 characters).
+                </div>
+            </div>
+            <div class="inputfield">
+                <label>Company Address:</label>
+                <textarea id="caddress" class="textarea" [(ngModel)]="comaddress.caddress" name="caddress"
+                    #caddress="ngModel" required></textarea>
+            </div>
+            <div *ngIf="caddress.errors && (caddress.dirty || caddress.touched)">
+                <div [hidden]="!caddress.errors" class="alert alert-danger form-alert">
+                    Please enter a valid address.
+                </div>
+            </div>
+            <div class="inputfield">
+                <label>Postal Code:</label>
+                <input id="postalcode" type="number" class="input" [(ngModel)]="comaddress.postal" name="postal"
+                    #postal="ngModel" required maxlength="6" min="100000">
+            </div>
+            <div *ngIf="postal.errors && (postal.dirty ||postal.touched)">
+                <div [hidden]="!postal.errors" class="alert alert-danger form-alert">
+                    Please enter a valid postal.
+                </div>
+            </div>
+            <div class="inputfield">
+                <label>No. of medicines manufactured in a year:</label>
+                <input id="medno" type="number" class="input" [(ngModel)]="supplier.quantity" name="quantity"
+                    #quantity="ngModel" required min="1">
+            </div>
+            <div *ngIf="quantity.errors && (quantity.dirty || quantity.touched)">
+                <div [hidden]="!quantity.errors" class="alert alert-danger form-alert">
+                    Please enter a valid quantity(min 1 ).
+                </div>
+            </div>
+            <div class="inputfield">
+                <label>Phone Number:</label>
+                <input id="phno" type="number" class="input" [(ngModel)]="supplier.phno" name="phno" #phno="ngModel" required
+                    maxlength="10" min="1000000000">
+            </div>
+            <div *ngIf="phno.errors && (phno.dirty || phno.touched)">
+                <div [hidden]="!phno.errors" class="alert alert-danger form-alert">
+                    Please enter a valid phone number.
+                </div>
+            </div>
+            <div class="inputfield">
+                <label>Government License:</label>
+                <input id="govlic" type="file" [(ngModel)]="supplier.proofurl" name="proofurl" #proofurl="ngModel"
+                    required>
+            </div>
+            <div *ngIf="proofurl.errors && (proofurl.dirty || proofurl.touched)">
+                <div [hidden]="!proofurl.errors" class="alert alert-danger form-alert">
+                    Please upload a valid document.
+                </div>
+            </div>
+            <div class="inputfield terms">           
+                    <p><input type="checkbox" ngModel name="checkbox" required>
+                    I agreed to terms and conditions</p>
+            </div>
+            <button type="submit" [disabled]="sform.invalid && !checkbox" (click)="addSupplier()" routerLink="../dashboard" >Register</button>
+            &nbsp;
+            <input type="button" value="clear" class="btn" (click)="reset()">
+        </div>
+    </form>
+</div>

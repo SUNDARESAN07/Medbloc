@@ -1,0 +1,65 @@
+<section class="box1">
+    <div class="inner-banner-image1">
+       
+        <div class="banner-image-content1">
+            <div id="form">
+                <h1>Upload QR Code here</h1>
+                <div id="box">
+                    <input class="file__upload" type="file"  (change)="getfile($event)">
+                   <br>
+                    <p>Qr Content: 
+                    <input class="qrcode" placeholder="Code" [value]="bno" (keyup)="keyup(qrcode.value)" #qrcode>
+                    <button class="btn"  required (click)="getMedicine()">submit</button>
+                    </p>   
+                    <div *ngIf="sflag">
+                        <h2>Medicine Batch No {{bno}} not found</h2>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="medicinedisplay" *ngIf="medicines.length>0">
+        <div *ngIf="qr">
+            <img [src]="getQRCode(bno)"/>
+            </div>
+        <div id="display">
+        <h1 style="padding-top:20px;color:white;" id="meds">Medicine Details Display</h1> 
+        <button id="clear" (click)="clear()">clear</button>
+    </div>
+        <div id="tabe">
+            
+            <table id="tabledm" class="tabled">
+                <thead>
+                    <th>S.no</th>
+                    <th>Company Name</th>
+                    <th>Medicine name</th>
+                    <th>Quantity</th>
+                    <th>Batch no</th>
+                    <th>MFG date</th>
+                    <th>EXP date</th>
+                    <th>Supplier Name</th>
+                    <th>Status</th>
+                </thead>
+                <tbody id="tbd">
+                    <tr *ngFor="let med of medicines;let i=index">
+                        <td>{{i+1}}</td>
+                        <td>{{med.cname}}</td>
+                        <td>{{med.medname}}</td>
+                        <td>{{med.quantity}}</td>
+                        <td>{{med.batchno}}</td>
+                        <td>{{med.mfgdate}}</td>
+                        <td>{{med.expdate}}</td>
+                        <td>{{med.sid}}</td>
+                        <td>{{med.status}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+   
+    <div class="medicinedisplay" *ngIf="medicines.length===0">
+        <h2>No Medicine data available</h2>
+    </div>
+</section>
