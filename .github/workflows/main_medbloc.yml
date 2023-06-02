@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'medbloc'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B36C79FE117F48C8AB8E8C6DCD3D4442 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2F65A0F982B04AF784DEEC4A0FC09D13 }}
           package: .
