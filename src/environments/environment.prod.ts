@@ -10,5 +10,6 @@ export const environment = {
     messagingSenderId: '266229450148',
     measurementId: 'G-D8NR37LJ2P',
   },
+  baseUrl:'https://medbloc.azurewebsites.net/',
   production: true
 };
